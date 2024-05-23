@@ -5,8 +5,11 @@ html{
 
 body{
     display: flex;
+    flex-direction: column; /* Change to column for better stacking on mobile */
     justify-content: center;
     align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 /* Div: NavBar */
@@ -23,28 +26,31 @@ body{
     box-shadow: 15px 10px 10px -3px #000000;
 }
 
-    .nav ul{
-        height: inherit;
-        position: relative;
-        margin-right: 10px;
-    }
+.nav ul{
+    height: inherit;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-        .nav ul li{
-            display: inline;
-            height: inherit;
-            position: inherit;
-            padding: 0.5px;
-            line-height: 2;
-            color: #282A36;
-            margin: 10%;
-        }
+.nav ul li{
+    display: inline;
+    height: inherit;
+    position: inherit;
+    padding: 0.5px 10px;
+    line-height: 2;
+    color: #282A36;
+    margin: 0 5px;
+}
 
-
-            .nav ul li:hover{
-                color: #ff8800;
-                cursor: pointer;
-                text-decoration: underline;
-            }
+.nav ul li:hover{
+    color: #ff8800;
+    cursor: pointer;
+    text-decoration: underline;
+}
 
 /* Div: BoxSVG */
 
@@ -71,13 +77,14 @@ body{
     margin-top: 125px;
     color: #ffffff;
 }
-    .Text h1{
-        font-size: 72px;
-    }
 
-    .Text p{
-        font-size: 48px;
-    }
+.Text h1{
+    font-size: 48px; /* Reduce font size for better readability on mobile */
+}
+
+.Text p{
+    font-size: 24px; /* Reduce font size for better readability on mobile */
+}
 
 /* Div: Footer */
 
@@ -93,4 +100,45 @@ body{
     font-size: 50%;
     text-align: center;
     border-radius: 20px 0 0 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .Text h1{
+        font-size: 36px; /* Further reduce font size for tablet and small screens */
+    }
+
+    .Text p{
+        font-size: 18px; /* Further reduce font size for tablet and small screens */
+    }
+
+    .BoxSVG{
+        width: 35px;
+        height: 80px;
+    }
+
+    .footer{
+        font-size: 60%; /* Adjust font size for footer on smaller screens */
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Text h1{
+        font-size: 28px; /* Further reduce font size for mobile */
+    }
+
+    .Text p{
+        font-size: 16px; /* Further reduce font size for mobile */
+    }
+
+    .BoxSVG{
+        width: 30px;
+        height: 70px;
+    }
+
+    .footer{
+        font-size: 70%; /* Adjust font size for footer on mobile */
+        padding: 6px;
+    }
 }
