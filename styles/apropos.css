@@ -1,0 +1,82 @@
+/* Main */
+html{
+    background-color: #282A36;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Div: NavBar */
+
+.nav{
+    background-color: #FFAC2F;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 65px;
+    text-align: center;
+    left: 0;
+    -webkit-box-shadow: 15px 10px 10px -3px #000000; 
+    box-shadow: 15px 10px 10px -3px #000000;
+}
+
+    .nav ul{
+        height: inherit;
+        position: relative;
+        margin-right: 10px;
+    }
+
+        .nav ul li{
+            display: inline;
+            height: inherit;
+            position: inherit;
+            padding: 0.5px;
+            line-height: 2;
+            color: #282A36;
+            margin: 10%;
+        }
+
+
+            .nav ul li:hover{
+                color: #ff8800;
+                cursor: pointer;
+                text-decoration: underline;
+            }
+
+/* Div: A Propos Code*/
+
+.code-block {
+    position: relative;
+    margin-top: 200px;
+    background-color: #000000;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    overflow-x: auto;
+    font-family: 'Courier New', Courier, monospace;
+    transform: scale(2);
+}
+.code-block pre {
+    color: #ffffff;
+    margin: 0;
+    
+}
+
+/* Div: Footer */
+
+.footer{
+    background-color: #FFAC2F;
+    position: fixed;
+    padding: 10px;
+    width: auto;
+    bottom: 0;
+    right: 0;
+    -webkit-box-shadow: 15px 10px 10px -3px #000000; 
+    box-shadow: 10px 10px 10px -3px #000000;
+    font-size: 50%;
+    text-align: center;
+    border-radius: 20px 0 0 0;
+}
